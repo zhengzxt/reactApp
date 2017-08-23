@@ -1,0 +1,157 @@
+#my{
+	width:100%;
+	height:100%;
+	@include flexbox();
+	@include flex-direction(column);
+	background:#f4f4f4;
+	position:relative;
+
+	header{
+		font-size:0.16rem;
+		color:white;
+		height:0.45rem;
+		background:#df253c;
+		padding:0 0.15rem;
+		line-height:0.45rem;
+		text-align:center;
+		
+		a{
+			font-size:0.16rem;
+			color:white;
+			height:0.45rem;
+			float:right;
+		}
+		span{
+			font-size:0.16rem;
+			color:white;
+			height:0.45rem;
+			float:left;
+		}
+	}
+
+	section{
+		@include flex(1);
+		width:100%;
+		overflow:scroll;
+		
+		div{
+			width:100%;
+			@include flexbox();
+			background:white;
+			padding:0.2rem 0.1rem;
+			margin-bottom:0.05rem;
+
+			img{
+				
+				height:0.5rem;
+				margin-right:0.1rem;
+				width:0.5rem;
+
+			}
+			p{
+				@include flex(5);
+				@include flexbox();
+				@include flex-direction(column);
+				@include justify-content(center);
+			}
+		}
+		ul{
+			width:100%;
+			padding-left:0.1rem;
+			background:white;
+			li{
+				//@include border(0px 0px 1px 0px,yellow);
+				border-bottom:1px solid #ededed;
+				height:0.5rem;
+				line-height:0.5rem;
+				i{
+					margin-right:0.1rem;
+				}
+			}
+		}
+	}
+	.login{
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		background:#f4f4f4;
+		z-index:100;
+		@include flexbox();
+		@include flex-direction(column);
+	
+		section{
+			padding:0 0.2rem;
+			input{
+				width:100%;
+				height:0.5rem;
+				border:none;
+				&:nth-child(1){
+					margin-top:0.3rem;
+					border-radius:5px 5px 0px 0px;
+				}
+				&:nth-child(2){
+					margin-top:2px;
+					border-radius:0px 0px 5px 5px;
+				}
+			}
+			button{
+				width:100%;
+				background:#ec5252;
+				margin-top:0.3rem;
+				border:none;
+				height:0.5rem;
+				color:white;
+				border-radius:5px;
+			}
+			p{
+				margin-top:0.3rem;
+				@include flexbox();
+				@include justify-content(space-between);
+			}
+		}
+	}
+	.registor{
+		position:absolute;
+		width:100%;
+		height:100%;
+		top:0;
+		left:0;
+		background:#f4f4f4;
+		@include flexbox();
+		@include flex-direction(column);
+
+		section{
+			padding:0 0.2rem;
+			input{
+				width:100%;
+				height:0.5rem;
+				border:none;
+				margin-top:2px;
+				&:nth-child(1){
+					margin-top:0.3rem;
+					border-radius:5px 5px 0px 0px;
+				}
+				&:nth-child(4){
+					
+					border-radius:0px 0px 5px 5px;
+				}
+			}
+			button{
+				width:100%;
+				background:#ec5252;
+				margin-top:0.3rem;
+				border:none;
+				height:0.5rem;
+				color:white;
+				border-radius:5px;
+			}
+			p{
+				margin-top:0.3rem;
+				@include flexbox();
+				@include justify-content(space-between);
+			}
+		}
+	}
+}

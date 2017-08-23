@@ -1,0 +1,176 @@
+#indent{
+	width:100%;
+	height:100%;
+	@include flexbox();
+	@include flex-direction(column);
+	background:#f4f4f4;
+
+	header{
+		font-size:0.16rem;
+		color:white;
+		height:0.45rem;
+		background:#df253c;
+		padding:0 0.15rem;
+		line-height:0.45rem;
+		text-align:center;
+	}
+
+	section{
+		@include flex(1);
+		width:100%;
+		@include flexbox();
+		@include justify-content(center);
+		@include align-items(center);
+		@include flex-direction(column);
+	}
+
+	.shopingcar{
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		background:#f4f4f4;
+		@include flexbox();
+		@include flex-direction(column);
+		header{
+			span{
+				float:left;
+			}
+		}
+		section{
+			overflow:scroll;
+
+			.car{
+				width:100%;
+				margin-bottom:0.24rem;
+				li{
+					width:100%;
+					background:white;
+					padding:0.1rem;
+					@include border(0px 0px 1px 0px,#f4f4f4);
+					@include flexbox();
+					@include justify-content(space-between);
+					div{
+						@include flexbox();
+						a{
+							width:100%;
+							img{
+								width:100%;
+							}
+						}
+						p{
+							width:100%;
+							@include flexbox();
+							@include flex-direction(column);
+							@include justify-content(space-between);
+							padding-left:0.1rem;
+
+						}
+					}
+					.docar{
+						@include flexbox();
+						width:100%;
+						@include align-items(flex-end);
+						@include justify-content(flex-end);
+						span{
+							width:0.24rem;
+							height:0.24rem;
+							@include border(1px,#f4f4f4);
+							margin:0 0.05rem;
+							text-align:center;
+							line-height:0.24rem;
+							&:nth-child(2){
+								border:none;
+							}
+						}
+					}
+				}
+			}
+			.title{
+				margin-left:2%;
+				margin-bottom:0.24rem;
+				padding-left:2%;
+				@include border(0px 0px 0px 3px,#eb5c56);
+				width:96%;
+			}
+			
+			.goods{
+				width:100%;
+				@include flexbox();
+				@include flex-wrap(wrap);
+				padding:0 0.1rem;
+				font-size:0.12rem;
+				li{
+					width:49%;
+					background:white;
+					margin-bottom:0.1rem;
+					&:nth-child(even){
+						margin-left:2%;
+					}
+
+					a{
+						display:block;
+						width:50%;
+						margin:0.24rem auto;
+						img{
+							width:100%;
+						}
+					}
+					p{
+						padding:0 0.1rem;
+						line-height:0.4rem;
+						height:0.4rem;
+						
+						&:nth-of-type(2){
+							@include flexbox();
+							@include justify-content(space-between);
+
+							span{
+								color:#f4640e;
+							}
+
+							.shopcar{
+								display:inline-block;
+								width:0.2rem;
+								line-height:0.2rem;
+								height:0.2rem;
+								text-align:center;
+								color:#f4640e;
+								/* @include border(1px,#f4640e);
+								@include border-radius(50%); */
+								border:1px solid #f4640e;
+								border-radius:50%; 
+								margin:0;
+							}
+						}
+						
+					}
+				}
+			}
+		}
+
+
+
+		footer{
+			height:0.45rem;
+			span{
+				height:100%;
+				&:nth-child(1){
+					background:#f4f4f4;
+					@include flex(3);
+					line-height:0.45rem;
+					padding-left:0.1rem;
+				}
+				&:nth-child(2){
+					background:#a72821;
+					@include flex(1);
+					line-height:0.45rem;
+					text-align:center;
+					color:white;
+				}
+			}
+		}
+
+	}
+}
